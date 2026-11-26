@@ -1,0 +1,255 @@
+# Example Conceptual Architecture - Table-based layout
+
+table:
+  width: 46.6
+  height: 20.0
+  spacing: 0.1
+  start_x: 2.0
+  start_y: 2.0
+
+  rows:
+    # Main area
+    - name: main_area
+      height: auto
+      columns:
+        # Column 1: Users (fixed width)
+        - width: 6.0
+          background: dark_navy_bg
+          cells_stack:
+            - label: "USERS"
+              style: header
+              height: 2.0
+              icon: "icons/icon-017-triple-circles.svg"
+            - label: "Customers"
+              style: box_desaturated
+              height: auto
+            - label: "Staff"
+              style: box_desaturated
+              height: auto
+            - label: "Partners"
+              style: box_desaturated
+              height: auto
+            - label: "Admins"
+              style: box_desaturated
+              height: auto
+
+        # Column 2: Application Layers (auto-fills remaining space)
+        - width: auto
+          table:
+            # Define column widths once for all layers (header fixed, content auto)
+            column_widths: [8.0, auto]
+            rows:
+              # Presentation Layer
+              - height: auto
+                columns:
+                  - cell:
+                      label: "PRESENTATION"
+                      style: header
+                      icon: "icons/icon-002-square.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Web UI"
+                                icon: "icons/icon-002-square.svg"
+                            - cell:
+                                label: "Mobile App"
+                                icon: "icons/icon-004-diamond.svg"
+                            - cell:
+                                label: "API Gateway"
+                                icon: "icons/icon-013-hexagon.svg"
+
+              # Business Logic Layer
+              - height: auto
+                columns:
+                  - cell:
+                      label: "BUSINESS\nLOGIC"
+                      style: header
+                      icon: "icons/icon-009-cross.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Order Service"
+                                icon: "icons/icon-005-circle-square.svg"
+                            - cell:
+                                label: "User Service"
+                                icon: "icons/icon-011-circle-cross.svg"
+                            - cell:
+                                label: "Payment Service"
+                                icon: "icons/icon-007-diamond-circle.svg"
+
+              # Data Layer
+              - height: auto
+                columns:
+                  - cell:
+                      label: "DATA"
+                      style: header
+                      icon: "icons/icon-008-concentric-circles.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Database"
+                                icon: "icons/icon-008-concentric-circles.svg"
+                            - cell:
+                                label: "Cache"
+                                icon: "icons/icon-025-ring.svg"
+                            - cell:
+                                label: "Object Storage"
+                                icon: "icons/icon-022-nested-squares.svg"
+              
+               # Technology Layer 1 (Azure blue)
+              - height: auto
+                style: tech_azure
+                columns:
+                  - cell:
+                      label: "TECH LAYER 1"
+                      style: header
+                      icon: "icons/icon-003-triangle.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Service A"
+                                style: tech_azure
+                                icon: "icons/icon-003-triangle.svg"
+                            - cell:
+                                label: "Service B"
+                                style: tech_azure
+                                icon: "icons/icon-001-circle.svg"
+                            - cell:
+                                label: "Service C"
+                                style: tech_azure
+                                icon: "icons/icon-014-star.svg"
+                            - cell:
+                                label: "Service D"
+                                style: tech_azure
+                                icon: "icons/icon-021-pentagon.svg"
+                            - cell:
+                                label: "Service E"
+                                style: tech_azure
+                                icon: "icons/icon-019-octagon.svg"
+                            - cell:
+                                label: "Service F"
+                                style: tech_azure
+                                icon: "icons/icon-018-square-diamond.svg"
+
+               # Technology Layer 2 (Teal)
+              - height: auto
+                style: tech_teal
+                columns:
+                  - cell:
+                      label: "TECH LAYER 2"
+                      style: header
+                      icon: "icons/icon-004-diamond.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Platform A"
+                                style: tech_teal
+                                icon: "icons/icon-016-overlapping-circles.svg"
+                            - cell:
+                                label: "Platform B"
+                                style: tech_teal
+                                icon: "icons/icon-017-triple-circles.svg"
+                            - cell:
+                                label: "Platform C"
+                                style: tech_teal
+                                icon: "icons/icon-030-nested-diamonds.svg"
+                            - cell:
+                                label: "Platform D"
+                                style: tech_teal
+                                icon: "icons/icon-009-cross.svg"
+
+               # Technology Layer 3 (Green)
+              - height: auto
+                style: tech_green
+                columns:
+                  - cell:
+                      label: "TECH LAYER 3"
+                      style: header
+                      icon: "icons/icon-013-hexagon.svg"
+                  - table:
+                      rows:
+                        - height: auto
+                          columns:
+                            - cell:
+                                label: "Tool 1"
+                                style: tech_green
+                                icon: "icons/icon-010-x.svg"
+                            - cell:
+                                label: "Tool 2"
+                                style: tech_green
+                                icon: "icons/icon-020-chevron-up.svg"
+                            - cell:
+                                label: "Tool 3"
+                                style: tech_green
+                                icon: "icons/icon-023-triangle-inverted.svg"
+                            - cell:
+                                label: "Tool 4"
+                                style: tech_green
+                                icon: "icons/icon-024-double-triangle.svg"
+                            - cell:
+                                label: "Tool 5"
+                                style: tech_green
+                                icon: "icons/icon-026-semicircle.svg"
+                            - cell:
+                                label: "Tool 6"
+                                style: tech_green
+                                icon: "icons/icon-027-quarter-circle.svg"
+                            - cell:
+                                label: "Tool 7"
+                                style: tech_green
+                                icon: "icons/icon-028-diagonal-line.svg"
+                            - cell:
+                                label: "Tool 8"
+                                style: tech_green
+                                icon: "icons/icon-029-asterisk.svg"
+                                                        
+              # Infrastructure Layer
+              - height: 2.0
+                columns:
+                  - cell:
+                      label: "INFRASTRUCTURE"
+                      style: header
+                      icon: "icons/icon-022-nested-squares.svg"
+                  - cell:
+                      label: "Kubernetes · Load Balancer · Monitoring · Logging"
+                      style: foundation
+
+        # Column 3: External Systems
+        - width: 7.0
+          background: dark_navy_bg
+          cells_stack:
+            - label: "EXTERNAL SYSTEMS"
+              style: header
+              icon: "icons/icon-016-overlapping-circles.svg"
+              height: 2.0
+            - label: "Payment Gateway"
+              style: box_desaturated
+              height: auto
+            - label: "Email Service"
+              style: box_desaturated
+              height: auto
+            - label: "SMS Provider"
+              style: box_desaturated
+              height: auto
+            - label: "Analytics"
+              style: box_desaturated
+              height: auto
+
+    # Security & Compliance row (spans full width)
+    - name: cross_cutting
+      height: 1.5
+      columns:
+        - width: auto
+          cell:
+            label: "SECURITY & COMPLIANCE  —  Authentication · Authorization · Encryption · Audit Logging · GDPR"
+            style: cross_cutting

@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "defaultScale": 2,
+  "diagrams": {
+    "architecture": {
+      "scale": 2
+    }
+  }
+}

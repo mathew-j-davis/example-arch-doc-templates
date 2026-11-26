@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Output files (generated)
+output/
+output-powerpoint/
+*.svg
+*.png
+*.pptx
+!powerpoint-template/clean_template.pptx
+*.docx
+
+# Generated intermediate files
+diagram-definitions/*-positioned.yaml
+
+# Cache files
+.png-cache.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

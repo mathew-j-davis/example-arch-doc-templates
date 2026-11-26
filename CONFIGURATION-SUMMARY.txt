@@ -1,0 +1,76 @@
+✅ Tool Paths Configuration System Created
+
+New Files:
+==========
+
+1. diagram-tools.config.yaml (163 lines)
+   - Main configuration file
+   - Set paths to boxesandarrows, concept_pack, boxwatcher
+   - Defaults to ../tool-name (standard layout)
+   - Supports relative and absolute paths
+
+2. load-tool-paths.sh (40 lines)
+   - Bash script to load config
+   - Exports BOXESANDARROWS_PATH, CONCEPT_PACK_PATH, BOXWATCHER_PATH
+   - Falls back to defaults if config missing
+   - Source this in bash scripts
+
+3. load-tool-paths.js (95 lines)
+   - Node.js module to load config
+   - Returns paths object: { boxesandarrows, concept_pack, boxwatcher }
+   - Can verify paths exist
+   - Use as: const paths = require('./load-tool-paths').loadToolPaths();
+
+4. CONFIGURATION.md (175 lines)
+   - Complete documentation
+   - Examples for different directory layouts
+   - Usage in bash and Node.js
+   - Troubleshooting guide
+
+Updated Scripts:
+================
+
+✅ generate-diagram.sh - Now uses $CONCEPT_PACK_PATH
+✅ generate-presentation.sh - Now uses $CONCEPT_PACK_PATH
+✅ watch.sh - Now uses $BOXWATCHER_PATH
+
+All scripts now source load-tool-paths.sh to get configured paths.
+
+Usage:
+======
+
+For end users - just edit one file:
+  diagram-tools.config.yaml
+
+For alternative layouts:
+  # Tools in subdirectory
+  boxesandarrows_path: ../tools/boxesandarrows
+  
+  # Absolute path
+  boxesandarrows_path: /usr/local/lib/boxesandarrows
+
+Verification:
+=============
+
+Bash:
+  DEBUG=1 source load-tool-paths.sh
+
+Node.js:
+  node load-tool-paths.js
+
+Both show:
+  ✅ boxesandarrows: /path/to/boxesandarrows
+  ✅ concept_pack: /path/to/concept_pack
+  ✅ boxwatcher: /path/to/boxwatcher
+
+Benefits:
+=========
+
+1. Single configuration point
+2. Supports any directory structure
+3. No hardcoded paths in scripts
+4. Easy to adapt for different environments
+5. Clear error messages if tools not found
+6. Works in both bash and Node.js
+
+Ready for public release! 🎉

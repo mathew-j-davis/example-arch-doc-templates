@@ -1,0 +1,30 @@
+# Presentation Configuration for Example Concept Pack
+
+template: "powerpoint-template/clean_template.pptx"
+
+# Map slide types to slide numbers in template
+# (Same as concept_pack/template-config-v4.yaml since template is identical)
+slide_types:
+  title-slide: 1
+  executive-summary: 2
+  concept-slide: 3
+  table: 4
+  tech-gaps-slide: 5
+  design-group-slide: 6
+  governance-slide: 7
+  text-slide: 8
+  image-slide: 9
+  section-slide: 10
+  content-slide: 8  # Alias for text-slide  
+# Table styling rules (if needed)
+table_styles: {}
+
+# Field styling conventions (documented for reference)
+# These are detected automatically by suffix:
+#
+# <field>:: value                      - Plain text replacement
+# <field>-topbar-color:: hex           - Colors the top bar shape
+# <field>-fill:: hex                   - Fills the shape background
+# <field>-text-color:: hex             - Sets text color
+# <field>-border:: hex                 - Sets border color
+# <field>-border-width:: points        - Sets border width

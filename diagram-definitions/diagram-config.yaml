@@ -1,0 +1,84 @@
+# Diagram Configuration for Example Concept Pack
+# Only contains styles and generic spacing - no manual positioning!
+# The table structure in example-architecture.yaml defines the layout.
+
+# Generic spacing (all dimensions in cm)
+layout:
+  item_spacing: 0.2    # Gap between adjacent boxes/columns
+  v_spacing: 0.2       # Vertical space between rows
+
+# Typography (optional - defaults from concept_pack config)
+typography:
+  font_size: 20        # Font size in pixels
+  font_weight: 500     # Font weight
+  font_family: 'Arial, sans-serif'
+
+# Border/Stroke (optional - defaults from concept_pack config)
+border:
+  stroke_width: 0      # Set to 0 to remove borders
+
+# Colors and Font Properties (standard hex format with # prefix)
+# Using darker blues with white text for better contrast
+colors:
+  box:
+    edge: '#2E5C8A'     # Darker blue (same as fill for no visible border)
+    fill: '#2E5C8A'     # Darker blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 18       # Slightly smaller for content
+
+  header:
+    edge: '#1F4A70'     # Very dark blue
+    fill: '#1F4A70'     # Very dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 20       # Larger for headers
+    font_weight: 700    # Bold
+
+  foundation:
+    edge: '#3D6B99'     # Medium dark blue
+    fill: '#3D6B99'     # Medium dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 16       # Smaller for foundation
+
+  cross_cutting:
+    edge: '#1F4A70'     # Very dark blue
+    fill: '#1F4A70'     # Very dark blue fill
+    text: '#FFFFFF'     # White text
+    font_size: 18
+
+  # Azure to green gradient styles for tech rows
+  tech_azure:
+    edge: '#4A90D9'     # Azure blue
+    fill: '#4A90D9'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_teal:
+    edge: '#3D9999'     # Teal
+    fill: '#3D9999'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_mint:
+    edge: '#3DA37A'     # Mint green
+    fill: '#3DA37A'
+    text: '#FFFFFF'
+    font_size: 18
+
+  tech_green:
+    edge: '#3DAD5B'     # Green
+    fill: '#3DAD5B'
+    text: '#FFFFFF'
+    font_size: 18
+
+  # Dark navy background for side columns
+  dark_navy_bg:
+    edge: '#1A2332'     # Dark navy
+    fill: '#1A2332'
+    stroke_width: 0
+
+  # Desaturated box style for cells on dark backgrounds
+  box_desaturated:
+    edge: '#4A6B8A'     # Desaturated blue
+    fill: '#4A6B8A'
+    text: '#FFFFFF'
+    font_size: 18

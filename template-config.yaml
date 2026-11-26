@@ -1,0 +1,76 @@
+# Template Configuration for Clean Template
+# No organizational branding - professional neutral design
+
+template: "clean_template.pptx"
+
+# Map slide types to slide numbers in template
+slide_types:
+  title-slide: 1
+  executive-summary: 2
+  concept-slide: 3
+  table: 4
+  tech-gaps-slide: 5
+  design-group-slide: 6
+  governance-slide: 7
+  text-slide: 8
+  image-slide: 9
+  section-slide: 10
+
+# Table styling rules by table-style name
+# Use in markdown with: table-style:: technology-stack
+table_styles:
+  technology-stack:
+    Status:  # Column header name
+      style_by_value:
+        Reuse:
+          fill: "E4F3F1"
+          text_color: "000000"
+        Extend:
+          fill: "E4F3F1"
+          text_color: "000000"
+        New:
+          fill: "E7EFF6"
+          text_color: "000000"
+        None yet:
+          fill: "F6ECEC"
+          text_color: "000000"
+
+  design-group:
+    Layer:  # Could style by layer if needed
+      style_by_value:
+        Application:
+          fill: "E7E6E6"
+        Integration:
+          fill: "F2F2F2"
+
+  financial-data:
+    Priority:  # Example of another table style
+      style_by_value:
+        High:
+          fill: "F6ECEC"
+          text_color: "000000"
+        Medium:
+          fill: "FFF4CC"
+          text_color: "000000"
+        Low:
+          fill: "E4F3F1"
+          text_color: "000000"
+
+# Field styling conventions (documented for reference)
+# These are detected automatically by suffix:
+#
+# <field>:: value                      - Plain text replacement
+# <field>-topbar-color:: hex           - Colors the top bar shape
+# <field>-fill:: hex                   - Fills the shape background
+# <field>-text-color:: hex             - Sets text color
+# <field>-border:: hex                 - Sets border color
+# <field>-border-width:: points        - Sets border width
+
+# Color Palette (for reference)
+colors:
+  brand_blue: "#1F4A70"       # Primary brand color
+  brand_light: "#2E5C8A"      # Secondary brand color
+  accent_teal: "#00A79D"      # Accent color
+  gray_dark: "#404040"        # Dark gray for text
+  gray_light: "#F2F2F2"       # Light gray for backgrounds
+  white: "#FFFFFF"            # White

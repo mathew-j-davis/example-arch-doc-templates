@@ -1,0 +1,26 @@
+{
+  "boxesandarrows": {
+    "path": "../boxesandarrows",
+    "command": "node ../boxesandarrows/src/index.js"
+  },
+  "paths": {
+    "definitions": "./diagram-definitions",
+    "output": "./output",
+    "builds": "./diagram-definitions/builds.csv",
+    "pngConfig": "./diagram-definitions/png-config.json",
+    "pngCache": "./.png-cache.json"
+  },
+  "watch": {
+    "patterns": ["diagram-definitions"],
+    "extensions": ["yaml", "csv", "json"],
+    "ignore": ["output", "node_modules"]
+  },
+  "png": {
+    "enabled": true,
+    "defaultScale": 2
+  },
+  "serve": {
+    "port": 8080,
+    "open": "/index.html"
+  }
+}

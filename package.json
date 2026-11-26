@@ -1,0 +1,18 @@
+{
+  "name": "example-concept-pack",
+  "version": "1.0.0",
+  "description": "Example concept pack with architecture diagrams and PowerPoint generation",
+  "scripts": {
+    "diagram": "./generate-diagram.sh",
+    "build": "./build-all.sh",
+    "watch": "./watch.sh"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "nodemon": "^3.0.1"
+  }
+}

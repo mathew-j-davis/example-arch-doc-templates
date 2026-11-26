@@ -1,0 +1,2 @@
+name,command,enabled
+architecture,cd ../concept_pack && python3 table-to-diagram.py ../example_concept_pack/diagram-definitions/example-architecture.yaml ../example_concept_pack/diagram-definitions/example-architecture-positioned.yaml && cd ../boxesandarrows && node src/index.js -y ../example_concept_pack/diagram-definitions/example-architecture-positioned.yaml -r svg -o ../example_concept_pack/output/architecture && cd ../example_concept_pack,true

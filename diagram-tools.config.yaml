@@ -1,0 +1,44 @@
+# Diagram Tools Configuration
+# Configure paths to the diagram generation tools relative to this project
+
+# Path to boxesandarrows repository
+# Default: ../boxesandarrows (assumes standard workspace layout)
+boxesandarrows_path: ../boxesandarrows
+
+# Path to concept_pack repository
+# Default: ../concept_pack (assumes standard workspace layout)
+concept_pack_path: ../concept_pack
+
+# Path to boxwatcher repository (optional, for watch mode)
+# Default: ../boxwatcher (assumes standard workspace layout)
+boxwatcher_path: ../boxwatcher
+
+# Standard workspace layout:
+# diagram-tools/
+# ├── boxesandarrows/
+# ├── concept_pack/
+# ├── boxwatcher/
+# └── my-project/              # This directory
+#     └── diagram-tools.config.yaml
+
+# Alternative layouts:
+#
+# Example 1: Tools in a sibling "tools" directory:
+# workspace/
+# ├── tools/
+# │   ├── boxesandarrows/
+# │   ├── concept_pack/
+# │   └── boxwatcher/
+# └── my-project/
+#     └── diagram-tools.config.yaml
+#
+# Config:
+#   boxesandarrows_path: ../tools/boxesandarrows
+#   concept_pack_path: ../tools/concept_pack
+#   boxwatcher_path: ../tools/boxwatcher
+#
+# Example 2: Tools installed globally
+# Config:
+#   boxesandarrows_path: /usr/local/lib/boxesandarrows
+#   concept_pack_path: /usr/local/lib/concept_pack
+#   boxwatcher_path: /usr/local/lib/boxwatcher
